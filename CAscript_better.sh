@@ -220,15 +220,15 @@ echo "install ssh for ca" ; sleep 3;
 echo "==================================================";
 
 echo "create CA" ;
-#if ! (create_ca) ; then echo "Failed!!!"; fi
+if ! (create_ca) ; then echo "Failed!!!"; fi
 echo "==================================================";
 echo "create pk for ws" ; 
-#if ! (create_pk_ws) ; then echo "Failed!!!"; fi
+if ! (create_pk_ws) ; then echo "Failed!!!"; fi
 echo "==================================================";
 echo "sign cert as ca" ; 
-#if ! (sign_cert_ca) ; then echo "Failed!!!"; fi
+if ! (sign_cert_ca) ; then echo "Failed!!!"; fi
 echo "==================================================";
 echo "config apache" ;
 if ! (config_apache) ; then echo "Failed!!!"; fi
 echo "==================================================";
-echo "Fuck yeah";
+echo "Done";
